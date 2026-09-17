@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tadiwa (DOC) | Elite IT Specialist & Software Solutions</title>
+  <meta name="description" content="Tadiwa AKA DOC - Professional IT Specialist Services. Windows 10/11 Activation, Microsoft Office Activation, Adobe Creative Suite (Photoshop, Illustrator), Software Installation & PC Support.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Lucide Icons (optional/clean icons) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+  <!-- 3D Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Background Glowing Orbs -->
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+  <div class="bg-glow orb-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>
+        <span class="logo-text">DOC<span class="highlight">.IT</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">About DOC</a>
+        <a href="#why-us" class="nav-link">Why Choose Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20assistance%20with%20IT%20Services!" target="_blank" class="btn-whatsapp-header">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container-split">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content-left">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Certified IT Specialist & Software Engineer</span>
+          </div>
+          
+          <h1 class="hero-title">
+            TADIWA <span class="aka">AKA</span> <br>
+            <span class="glow-text">DOC</span> IT SPECIALIST
+          </h1>
+          
+          <p class="hero-subtitle">
+            Next-generation 3D digital solutions, lifetime genuine Windows & Office activations, and full Adobe Creative Suite installations (Photoshop, Illustrator & more).
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">
+              <span>Explore All Services</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/263771617226?text=Hello%20Tadiwa%20(DOC),%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp DOC</span>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="btn btn-facebook">
+              <i class="fa-brands fa-facebook"></i>
+              <span>Facebook</span>
+            </a>
+          </div>
+
+          <!-- Hero Quick Stats -->
+          <div class="hero-stats-banner glass-panel">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Permanent License</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">⚡ Fast</span>
+              <span class="stat-label">Remote Activation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 3D Interactive Stage -->
+        <div class="hero-3d-wrapper">
+          <div class="stage-3d-card glass-panel">
+            <div class="stage-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="stage-title">3D WORKSTATION & LICENSING HUB</span>
+              <span class="stage-hint"><i class="fa-solid fa-hand-pointer"></i> Drag to spin 360°</span>
+            </div>
+
+            <!-- 3D Canvas Mount -->
+            <div class="canvas-viewport" id="hero-3d-viewport">
+              <!-- Three.js will render directly here -->
+              <div class="stage-overlay-hud" id="stageHud">
+                <span class="hud-tag">ACTIVE OBJECT</span>
+                <h4 id="hudTitle">Windows 11 Pro</h4>
+                <p id="hudDesc">Permanent Digital License • No Expiry • Genuine Updates</p>
+                <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20want%20to%20activate%20Windows" target="_blank" class="btn-hud" id="hudAction">
+                  <span>Activate via WhatsApp</span>
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 3D Interactive Controls & Selectors -->
+            <div class="stage-controls">
+              <button class="stage-btn active" data-target="windows">
+                <i class="fa-brands fa-windows"></i>
+                <span>Windows</span>
+              </button>
+              <button class="stage-btn" data-target="office">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Office 365</span>
+              </button>
+              <button class="stage-btn" data-target="photoshop">
+                <i class="fa-solid fa-image"></i>
+                <span>Photoshop</span>
+              </button>
+              <button class="stage-btn" data-target="illustrator">
+                <i class="fa-solid fa-pen-nib"></i>
+                <span>Illustrator</span>
+              </button>
+              <button class="stage-btn icon-only" id="toggleAutoRotate" title="Toggle Auto-Rotation">
+                <i class="fa-solid fa-rotate"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">PREMIUM SOLUTIONS</span>
+          <h2 class="section-title">Specialized <span class="highlight">IT Services</span></h2>
+          <p class="section-description">High-performance installations, permanent digital licenses, and dedicated technical support.</p>
+        </div>
+
+        <div class="services-grid">
+          
+          <!-- Service Card 1: Windows Activation -->
+          <div class="service-card glass-panel" data-tilt>
+            <div class="card-icon-wrapper win-glow">
+              <i class="fa-brands fa-windows"></i>
+            </div>
+            <div class="card-badge">Genuine & Permanent</div>
+            <h3 class="card-title">Windows Activation</h3>
+            <p class="card-text">
+              Lifetime genuine activation for all Windows versions. Remove watermark, unlock personalization, and receive authentic Microsoft security updates.
+            </p>
+            <ul class="card-features">
+              <li><i class="fa-solid fa-check"></i> Windows 11 Pro / Home / Enterprise</li>
+              <li><i class="fa-solid fa-check"></i> Windows 10 Pro / Home</li>
+              <li><i class="fa-solid fa-check"></i> Permanent Digital License (No Expiry)</li>
+              <li><i class="fa-solid fa-check"></i> Instant Remote Setup via AnyDesk/TeamViewer</li>
+            </ul>
+            <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20want%20Windows%20Activation%20service" target="_blank" class="card-btn">
+              <span>Order Windows Service</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 2: Office Activation -->
+          <div class="service-card glass-panel" data-tilt>
+            <div class="card-icon-wrapper office-glow">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="card-badge">Full Suite</div>
+            <h3 class="card-title">Microsoft Office Suite</h3>
+            <p class="card-text">
+              Complete Microsoft Office productivity bundle activation. Word, Excel, PowerPoint, Access, Outlook, and OneNote ready for lifetime work.
+            </p>
+            <ul class="card-features">
+              <li><i class="fa-solid fa-check"></i> Microsoft 365 ProPlus / 2024 / 2021</li>
+              <li><i class="fa-solid fa-check"></i> Full Apps: Word, Excel, PowerPoint & More</li>
+              <li><i class="fa-solid fa-check"></i> Zero Product Key Warnings</li>
+              <li><i class="fa-solid fa-check"></i> Mac & Windows Compatibility</li>
+            </ul>
+            <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20want%20Microsoft%20Office%20Activation" target="_blank" class="card-btn">
+              <span>Order Office Service</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 3: Adobe Master Suite -->
+          <div class="service-card glass-panel" data-tilt>
+            <div class="card-icon-wrapper adobe-glow">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="card-badge featured">Creative Pro</div>
+            <h3 class="card-title">Adobe Creative Suite</h3>
+            <p class="card-text">
+              Full version installation & activation of world-class creative tools for designers, video editors, photographers, and architects.
+            </p>
+            <ul class="card-features">
+              <li><i class="fa-solid fa-check"></i> Adobe Photoshop & Lightroom</li>
+              <li><i class="fa-solid fa-check"></i> Adobe Illustrator & InDesign</li>
+              <li><i class="fa-solid fa-check"></i> Premiere Pro, After Effects & Audition</li>
+              <li><i class="fa-solid fa-check"></i> Pre-activated, Unlimited Lifetime Access</li>
+            </ul>
+            <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20Adobe%20Photoshop%20and%20Illustrator%20installation" target="_blank" class="card-btn">
+              <span>Order Adobe Apps</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 4: PC Optimization & OS Installation -->
+          <div class="service-card glass-panel" data-tilt>
+            <div class="card-icon-wrapper it-glow">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="card-badge">System Care</div>
+            <h3 class="card-title">OS Installation & Tuning</h3>
+            <p class="card-text">
+              Fresh Windows installations, SSD upgrades, system speedup, driver optimizations, and virus/malware eradication.
+            </p>
+            <ul class="card-features">
+              <li><i class="fa-solid fa-check"></i> Clean OS Formatting & Dual-Boot</li>
+              <li><i class="fa-solid fa-check"></i> Deep Performance & RAM Optimization</li>
+              <li><i class="fa-solid fa-check"></i> Malware, Spyware & Adware Removal</li>
+              <li><i class="fa-solid fa-check"></i> Essential Driver & Utility Setup</li>
+            </ul>
+            <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20PC%20Optimization%20or%20OS%20Installation" target="_blank" class="card-btn">
+              <span>Book PC Tune-Up</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 5: Engineering & Specialized Apps -->
+          <div class="service-card glass-panel" data-tilt>
+            <div class="card-icon-wrapper eng-glow">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div class="card-badge">Specialist</div>
+            <h3 class="card-title">Engineering & Design Apps</h3>
+            <p class="card-text">
+              Heavy software deployment for engineers, architects, audio producers, and 3D modellers.
+            </p>
+            <ul class="card-features">
+              <li><i class="fa-solid fa-check"></i> AutoCAD, Revit, SolidWorks, SketchUp</li>
+              <li><i class="fa-solid fa-check"></i> FL Studio, Ableton Live, Logic Pro</li>
+              <li><i class="fa-solid fa-check"></i> MATLAB, SPSS, CorelDraw</li>
+              <li><i class="fa-solid fa-check"></i> Configuration & GPU Acceleration</li>
+            </ul>
+            <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20Specialized%20Engineering%20or%20Design%20Software" target="_blank" class="card-btn">
+              <span>Request Software</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 6: IT Diagnostics & Remote Help -->
+          <div class="service-card glass-panel" data-tilt>
+            <div class="card-icon-wrapper support-glow">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="card-badge">Fast Support</div>
+            <h3 class="card-title">Remote Diagnostics & Fixes</h3>
+            <p class="card-text">
+              Immediate remote assistance no matter where you are located. Instant problem diagnosis and bug resolution.
+            </p>
+            <ul class="card-features">
+              <li><i class="fa-solid fa-check"></i> Live screen-share troubleshooting</li>
+              <li><i class="fa-solid fa-check"></i> BSOD (Blue Screen) Fixes</li>
+              <li><i class="fa-solid fa-check"></i> Network & Internet connectivity issues</li>
+              <li><i class="fa-solid fa-check"></i> Software compatibility resolution</li>
+            </ul>
+            <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20immediate%20remote%20IT%20assistance" target="_blank" class="card-btn">
+              <span>Get Instant Fix</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-visual">
+            <div class="avatar-3d-frame glass-panel">
+              <div class="avatar-glow"></div>
+              <div class="avatar-icon-orbit">
+                <div class="orbit-icon icon-1"><i class="fa-brands fa-windows"></i></div>
+                <div class="orbit-icon icon-2"><i class="fa-solid fa-file-excel"></i></div>
+                <div class="orbit-icon icon-3"><i class="fa-solid fa-pen-nib"></i></div>
+                <div class="orbit-icon icon-4"><i class="fa-solid fa-code"></i></div>
+              </div>
+              <div class="doc-badge-center">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>DOC</h3>
+                <span>Tadiwa Tanyanyiwa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-tag">MEET THE SPECIALIST</span>
+            <h2 class="section-title">Your Trusted Tech Doctor, <span class="highlight">Tadiwa "DOC"</span></h2>
+            <p class="lead-text">
+              With deep expertise in software deployment, system architecture, and operating systems licensing, I ensure your workstation and creative tools operate at peak efficiency.
+            </p>
+            <p class="body-text">
+              Whether you are a student, creative professional, business owner, or engineer, I deliver reliable, lifetime, and error-free IT support with rapid turnaround times.
+            </p>
+
+            <div class="social-connect-bar glass-panel">
+              <span class="connect-label">Connect Directly:</span>
+              <div class="social-buttons">
+                <a href="https://wa.me/263771617226?text=Hi%20Tadiwa%20DOC!" target="_blank" class="social-pill whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>+263 77 161 7226</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="social-pill facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Tadiwa Tanyanyiwa</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="about-perks">
+              <div class="perk-item">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                  <h4>Under 15-Minute Turnaround</h4>
+                  <p>Fast remote activation and troubleshooting anywhere.</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <h4>100% Guaranteed Reliability</h4>
+                  <p>Authentic methods that do not compromise your device security.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">WHY CLIENTS TRUST DOC</span>
+          <h2 class="section-title">The <span class="highlight">DOC Difference</span></h2>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card glass-panel">
+            <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
+            <h3>Genuine Licenses</h3>
+            <p>Permanent digital activations that stay valid across updates and reinstalls.</p>
+          </div>
+          <div class="why-card glass-panel">
+            <div class="why-icon"><i class="fa-solid fa-lock"></i></div>
+            <h3>Safe & Virus Free</h3>
+            <p>100% clean software without malware, coin miners, or security vulnerabilities.</p>
+          </div>
+          <div class="why-card glass-panel">
+            <div class="why-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <h3>Lifetime Warranty</h3>
+            <p>Full follow-up support if you ever face any unexpected software glitches.</p>
+          </div>
+          <div class="why-card glass-panel">
+            <div class="why-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Remote or Onsite</h3>
+            <p>Available worldwide via secure remote desktop or in-person in Harare/Zimbabwe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Contact & Booking Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-info-panel glass-panel">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2 class="section-title">Ready for <span class="highlight">Flawless Software?</span></h2>
+            <p class="contact-desc">
+              Message DOC directly on WhatsApp or Facebook for instant assistance, quotes, and immediate activation.
+            </p>
+
+            <div class="direct-contact-cards">
+              <!-- WhatsApp Card -->
+              <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20your%20services" target="_blank" class="direct-card wa-direct">
+                <div class="direct-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="direct-details">
+                  <span class="direct-type">WhatsApp (Fastest Response)</span>
+                  <span class="direct-value">+263 77 161 7226</span>
+                </div>
+                <div class="direct-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <!-- Email Card -->
+              <a href="mailto:tadiwatanyanyiwa69@gmail.com?subject=IT%20Services%20Inquiry%20for%20DOC" class="direct-card email-direct">
+                <div class="direct-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="direct-details">
+                  <span class="direct-type">Direct Email</span>
+                  <span class="direct-value">tadiwatanyanyiwa69@gmail.com</span>
+                </div>
+                <div class="direct-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <!-- Facebook Card -->
+              <a href="https://facebook.com" target="_blank" class="direct-card fb-direct">
+                <div class="direct-icon"><i class="fa-brands fa-facebook"></i></div>
+                <div class="direct-details">
+                  <span class="direct-type">Facebook Profile</span>
+                  <span class="direct-value">Tadiwa Tanyanyiwa</span>
+                </div>
+                <div class="direct-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <!-- Availability -->
+              <div class="direct-card status-direct">
+                <div class="direct-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="direct-details">
+                  <span class="direct-type">Current Availability</span>
+                  <span class="direct-value">Online & Taking Orders</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-panel glass-panel">
+            <h3 class="form-title">Send a Quick Message</h3>
+            <p class="form-subtitle">Messages are delivered directly to DOC's inbox: <strong class="highlight">tadiwatanyanyiwa69@gmail.com</strong></p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="e.g. Tendai Moyo" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Phone / WhatsApp or Email</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="text" id="email" name="email" placeholder="+263 ... or email@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Required</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-list-check"></i>
+                  <select id="service" name="service">
+                    <option value="Windows Activation">Windows 10 / 11 Permanent Activation</option>
+                    <option value="Microsoft Office Suite">Microsoft Office 365 / 2024 / 2021</option>
+                    <option value="Adobe Creative Suite">Adobe Photoshop, Illustrator, Premiere Pro</option>
+                    <option value="PC Speedup & Clean Install">Windows Clean Install & Optimization</option>
+                    <option value="Engineering & CAD Software">Engineering / CAD / Music Software</option>
+                    <option value="General IT Troubleshooting">General IT Support & Diagnostics</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Details / Questions</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-message"></i>
+                  <textarea id="message" name="message" rows="4" placeholder="Describe what you need help with..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-submit" id="submitBtn">
+                <span class="btn-text">Submit Request</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div id="formAlert" class="form-alert"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>
+          <span class="logo-text">DOC<span class="highlight">.IT</span></span>
+        </div>
+        <p class="footer-tagline">Tadiwa Tanyanyiwa (DOC) — Professional IT Specialist & System Solutions.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Direct Channels</h4>
+        <ul>
+          <li><a href="mailto:tadiwatanyanyiwa69@gmail.com"><i class="fa-solid fa-envelope"></i> tadiwatanyanyiwa69@gmail.com</a></li>
+          <li><a href="https://wa.me/263771617226" target="_blank"><i class="fa-brands fa-whatsapp"></i> +263 77 161 7226</a></li>
+          <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Tadiwa Tanyanyiwa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tadiwa "DOC" IT Specialist Services. All rights reserved.</p>
+        <p class="powered-by">High Performance 3D Web Engine</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick WhatsApp Button -->
+  <a href="https://wa.me/263771617226?text=Hi%20DOC,%20I%20need%20quick%20IT%20assistance" target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-wa-tooltip">Chat with DOC</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
